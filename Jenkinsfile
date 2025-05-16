@@ -36,7 +36,7 @@ pipeline {
 
 	post {
 		always {
-		  sh 'docker rm -f continer-name || true'
+		  sh 'docker rm -f my-node-app || true'
 		  }
 		}
 
