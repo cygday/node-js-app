@@ -1,0 +1,43 @@
+mkdir my-node-app && cd my-node-app
+npm init -y
+npm install express
+npm install --save-dev jest
+
+
+install supertest
+npm install --save-dev supertest
+
+run$test
+
+npm start#run app
+npm test#run tests
+
+jenkinsfile example
+groovy
+pipeline{
+	agent any
+
+	stages{
+		stage('install'){
+		  steps {
+		    sh 'npm install'
+		}
+	}
+		stage('test'){
+		  steps {
+		    sh 'npm test'
+		} 
+	}
+		stage('build & run'){
+		  steps {
+		    sh 'node app.js &'
+			}
+		}
+	}
+}
+
+
+docker build -t my-node-app .
+docker run -p 3000: 3000 my-node-app
+
+visit : http://localhost:3000
