@@ -11,7 +11,7 @@ pipeline {
 	stages {
 		stage('checkout code'){
 		  steps {
-		    git 'repo-url'
+		    git 'https://github.com/cygday/node-js-app.git'
 		  }
 		}
 
@@ -28,7 +28,7 @@ pipeline {
 	
 		stage('run docker container') {
 		  steps {
-			sh 'docker run -d -p 3000:3000 --name container-name $IMAGE_NAME:$IMAGE_TAG'
+			sh 'docker run -d -p 3000:3000 --name my-node-app $IMAGE_NAME:$IMAGE_TAG'
 			}
 	
 		  }
