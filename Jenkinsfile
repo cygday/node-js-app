@@ -28,7 +28,7 @@ pipeline {
 	
 		stage('run docker container') {
 		  steps {
-			sh 'docker run -d -p 3000:3000 --name my-node-app $IMAGE_NAME:$IMAGE_TAG'
+			sh 'docker run -d -p 3001:3001 --name my-node-app $IMAGE_NAME:$IMAGE_TAG'
 			}
 	
 		  }
