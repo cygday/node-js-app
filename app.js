@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
 res.send('hello, there');
 });
 
-app.listen(port, () => console.log('app running on port ${port}'));
+app.listen(3000, () => console.log('server running'));
 
 module.exports = app;
